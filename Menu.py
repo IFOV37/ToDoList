@@ -2,7 +2,5 @@
 
 class Menu:
 
-    def display_ProgramName(self):
-        return "Welcome your To-Do List"
-
-    
+    def display_programname(self):
+        return "Welcome to your To-Do List"
