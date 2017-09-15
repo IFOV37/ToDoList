@@ -2,10 +2,10 @@
 
 import Menu
 
-
-test1 = Menu.Menu()
-
-print(test1.display_programname())
+# display program name and menu options
+menu1 = Menu.Menu()
+menu1.displayProgramName()
+menu1.displayMenu()
 
 
 
