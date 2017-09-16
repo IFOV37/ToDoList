@@ -10,6 +10,7 @@ class Menu:
         self.menuOptions.append("3) Edit item in list.")
         self.menuOptions.append("4) Swap 2 tasks.")
         self.menuOptions.append("5) Display the list.")
+        self.menuOptions.append("6) Exit program.")
         self.toDoTasks = []
         return
 
