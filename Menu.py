@@ -40,16 +40,33 @@ class Menu:
 
         while 1:
             if taskToEdit < 1 or taskToEdit > len(self.toDoTasks):
-                print("Invalid option, please choose another")
+                taskToEdit = int(input("Invalid option, please choose another\n"))
             else:
                 break
 
-        taskTextToEdit = input("Enter the desired task to replace the current one.")
+        taskTextToEdit = input("Enter the desired task to replace the current one.\n")
 
         self.toDoTasks[taskToEdit - 1] = taskTextToEdit
         return
 
     def swap(self):
+        task1 = int(input("Enter the NUMBER of the first item you want to swap\n"))
+        while 1:
+            if task1 < 1 or task1 > len(self.toDoTasks):
+                task1 = int(input("Invalid option, please choose another\n"))
+            else:
+                break
+
+        task2 = int(input("Enter the NUMBER of the second item you want to swap\n"))
+        while 1:
+            if task2 < 1 or task2 > len(self.toDoTasks):
+                task2 = int(input("Invalid option, please choose another\n"))
+            else:
+                break
+
+        temp = self.toDoTasks[task1 - 1]
+        self.toDoTasks[task1 - 1] = self.toDoTasks[task2 - 1]
+        self.toDoTasks[task2 - 1] = temp
         return
 
     def display(self):
