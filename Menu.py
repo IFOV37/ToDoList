@@ -24,21 +24,35 @@ class Menu:
         return
 
     def add(self):
-        print("Please enter the name of the task you would like to add")
-        task = input()
-        self.toDoTasks.append(task)
-        print(self.toDoTasks)
+        taskToAdd = input("Please enter the NAME of the task you would like to add\n")
+        self.toDoTasks.append(taskToAdd)
         return
 
     def remove(self):
+        self.display()
+        taskToRemove = int(input("Please enter the NUMBER of the task you would like to remove\n"))
+        self.toDoTasks.pop(taskToRemove - 1)
         return
 
     def edit(self):
+        self.display()
+        taskToEdit = int(input("Choose the NUMBER of the item you want to edit.\n"))
+
+        while 1:
+            if taskToEdit < 1 or taskToEdit > len(self.toDoTasks):
+                print("Invalid option, please choose another")
+            else:
+                break
+
+        taskTextToEdit = input("Enter the desired task to replace the current one.")
+
+        self.toDoTasks[taskToEdit - 1] = taskTextToEdit
         return
 
     def swap(self):
         return
 
     def display(self):
+        print(self.toDoTasks)
         return
 
